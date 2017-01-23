@@ -74,7 +74,7 @@ def server_error(e):
 
 if __name__ == '__main__':
     try:
-        httpd = make_server('10.142.0.5', 8080, application) 
+        httpd = make_server('127.0.0.1', 8080, application) 
         print "Serving on port 8080"
         httpd.serve_forever()
     except KeyboardInterrupt:
