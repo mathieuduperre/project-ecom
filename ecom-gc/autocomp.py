@@ -58,7 +58,7 @@ def application (environ,start_response):
         print output
     
     status = '200 OK'
-    response_headers = [('Content-type','json/application; charset=utf-8'),('Access-Control-Allow-Origin','http://104.196.185.23'),('Allow-Control-Allow-Method','GET,PUT')]    
+    response_headers = [('Content-type','json/application; charset=utf-8'),('Access-Control-Allow-Origin','*'),('Allow-Control-Allow-Method','GET,PUT')]    
     start_response(status,response_headers)
     print "Response sent"
     print "------------------------------------\n"

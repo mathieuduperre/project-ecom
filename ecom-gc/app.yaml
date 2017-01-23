@@ -1,3 +1,9 @@
 entrypoint: python autocomp.py
 env: flex
 runtime: python
+
+handlers:
+- url: /
+  static_dir: static/translation
+  http_headers:
+    Access-Control-Allow-Origin: "*"
