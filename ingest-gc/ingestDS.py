@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # Imports the Google Cloud client library
 from google.cloud import datastore
 import datetime
@@ -8,7 +6,6 @@ import json
 from pprint import pprint
 
 json_file_input = 'bestbuy.json'
-NbProduct = 0
 
 ts = time.time()
 st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
@@ -22,6 +19,7 @@ def read_json_input():
 
 def write_to_datastore(data):
     # Instantiates a client
+    NbProduct = 0
     datastore_client = datastore.Client()
 
     for item in data:
@@ -29,6 +27,7 @@ def write_to_datastore(data):
          add_product(datastore_client,item)
          NbProduct += 1
     print 'End time'
+    ts = time.time()
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
     print st
     print 'Processed %s products' % NbProduct
