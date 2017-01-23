@@ -12,7 +12,6 @@ import time
 app = Flask(__name__)
 
 @app.route('/')
-
 def application (environ,start_response):
 
     output = []
@@ -71,10 +70,9 @@ def server_error(e):
     See logs for full stacktrace.
     """.format(e), 500
 
-
 if __name__ == '__main__':
     try:
-        httpd = make_server('127.0.0.1', 8080, application) 
+        httpd = make_server('', 8080, application) 
         print "Serving on port 8080"
         httpd.serve_forever()
     except KeyboardInterrupt:
