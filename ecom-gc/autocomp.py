@@ -25,6 +25,10 @@ def application (environ,start_response):
     try:
         # environ['QUERY_STRING'] returns ""
         qsdata = urlparse.parse_qs( environ['QUERY_STRING'] )
+        pathUrl = environ['PATH_INFO']
+        if "/_ah/health" in pathUrl:
+            start_response('200 OK', [('Content-Type', 'text/html')])
+            return ['healthy']
     except:
         output = ["parse error"]
 
