@@ -1,0 +1,3 @@
+entrypoint: python autocomp.py
+env: flex
+runtime: python

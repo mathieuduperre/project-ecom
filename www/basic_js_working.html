@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" src="/awesomplete/awesomplete.css">
+<script src="/awesomplete/awesomplete.min.js"></script>
+
+
+  </head>
+  <body>
+<input id="countries" />
+<script language="javascript">
+var input = document.getElementById("countries");
+var awesomplete = new Awesomplete(input, {
+  minChars: 1,
+  maxItems: 5,
+  autoFirst: true
+});
+awesomplete.list = ["China", "India", "Japan", "Russia", "UK", "USA"];
+</script>
+  </body>
+</html>
