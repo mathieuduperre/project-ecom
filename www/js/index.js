@@ -6,7 +6,7 @@ var awesomplete = new Awesomplete(input, {
 
 $("input").on("keyup", function(){
   $.ajax({
-    url: 'http://104.196.185.23:8080/?search=' + this.value,
+    url: 'https://ecommerce-autocomplete.appspot.com/?search=' + this.value,
     type: 'GET',
     dataType: 'json'
   })
